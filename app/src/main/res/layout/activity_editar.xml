@@ -7,49 +7,86 @@
     tools:context=".Activity_Editar">
 
     <ImageView
-        android:id="@+id/fotografia1"
-        android:layout_width="wrap_content"
-        android:layout_height="324dp"
+        android:id="@+id/fotografia"
+        android:layout_width="254dp"
+        android:layout_height="208dp"
+        android:layout_alignParentEnd="true"
         android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        app:srcCompat="@drawable/foto" />
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="77dp"
+        android:src="@drawable/foto" />
 
     <Button
-        android:id="@+id/btnAudio"
-        android:layout_width="162dp"
+        android:id="@+id/btntakefoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fotografia"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="131dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="87dp"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:text="Tomar Foto" />
+
+    <Button
+        android:id="@+id/btnRecordAudio"
+        android:layout_width="193dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:textColor="@color/black"
-        android:textSize="18dp"
         android:layout_marginStart="131dp"
-        android:layout_marginTop="380dp"
-        android:layout_marginEnd="118dp"
-        android:text="Grabar Audio" />
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="87dp"
+        android:layout_below="@id/btntakefoto"
+        android:text="Grabar Audio"
+        android:textColor="@color/black"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/textViewResult2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnRecordAudio"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="131dp"
+        android:layout_marginEnd="131dp"
+        android:text="Tu Grabacion"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.546"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRecordAudio"
+        app:layout_constraintVertical_bias="0.19" />
 
     <EditText
-        android:id="@+id/txtNombre1"
+        android:id="@+id/txtNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btnAudio"
+        android:layout_below="@id/btnRecordAudio"
         android:textColor="@color/black"
         android:layout_marginTop="16dp"
         android:hint="Nombre" />
 
     <EditText
-        android:id="@+id/txtDescripcion1"
+        android:id="@+id/txtDescripcion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/txtNombre1"
+        android:layout_below="@id/txtNombre"
         android:textColor="@color/black"
         android:layout_marginTop="8dp"
         android:hint="Descripción" />
 
     <EditText
-        android:id="@+id/txtFecha1"
+        android:id="@+id/txtFecha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/txtDescripcion1"
+        android:layout_below="@id/txtDescripcion"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="106dp"
@@ -60,30 +97,43 @@
         android:text="Fecha: DD/MM/YYYY" />
 
     <Button
-        android:id="@+id/btnActualizar"
+        android:id="@+id/btnSave"
         android:layout_width="138dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/txtFecha1"
+        android:layout_below="@id/txtFecha"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="142dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="131dp"
+        android:layout_marginStart="222dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="50dp"
+        android:text="Guardar"
         android:textColor="@color/black"
-        android:textSize="18dp"
-        android:text="Guardar" />
+        android:textSize="18dp" />
 
     <Button
-        android:id="@+id/btnVer"
-        android:layout_width="140dp"
+        android:id="@+id/btnSee"
+        android:layout_width="128dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btnActualizar"
+        android:layout_below="@id/btnSave"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="-48dp"
+        android:layout_marginEnd="26dp"
+        android:text="Ver"
+        android:textColor="@color/black"
+        android:textSize="18dp" />
+
+    <Button
+        android:id="@+id/btnAct"
+        android:layout_width="168dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnSave"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="142dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="129dp"
-        android:text="Ver"
+        android:layout_marginStart="138dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="105dp"
+        android:text="Actualizar"
         android:textColor="@color/black"
         android:textSize="18dp" />
 
