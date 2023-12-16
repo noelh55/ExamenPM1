@@ -29,14 +29,16 @@ public class SQLiteConexion extends SQLiteOpenHelper {
         return(getReadableDatabase().rawQuery("SELECT * FROM imagen",null));
     }
 
-    public void insert(byte[] bytes, String descripcion)
+    public void insert(byte[] bytes, String descripcionText, String nombreText, String fechaText)
     {
         ContentValues cv = new ContentValues();
 
         cv.put(Transacciones.blonImagen,bytes);
-        cv.put(Transacciones.descripcion,descripcion);
+        cv.put(Transacciones.nombre,nombreText);
+        cv.put(Transacciones.descripcion,descripcionText);
+        cv.put(Transacciones.fecha,fechaText);
         Log.e("inserted", "inserted");
-        getWritableDatabase().insert(Transacciones.tablaImagen,Transacciones.idImagen,cv);
+        getWritableDatabase().insert(Transacciones.tablaImagen,Transacciones.idOrden,cv);
     }
     public byte[] getImage(Cursor c)
     {

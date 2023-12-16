@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Activity_lista_fotos extends AppCompatActivity {
+public class Activity_lista extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
